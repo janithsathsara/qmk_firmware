@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   /*┌───────────┐┌──────────┐┌───────────┐┌───────────┐┌───────────┐┌────────────┐                           ┌────────────┐┌────────────┐┌───────────┐┌───────────┐┌─────────────┐┌──────────┐*/
                       TO(0), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CAPS,                             KC_CAPS,  XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,   TO(2),
                   /*├───────────┤├──────────┤├───────────┤├───────────┤├───────────┤├────────────┤                           ├────────────┤├────────────┤├───────────┤├───────────┤├─────────────┤├──────────┤*/
-                    XXXXXXX,   KC_F5,   KC_F6,   KC_F1, KC_PSCR, XXXXXXX,                             XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,   TO(3),
+                    XXXXXXX,   KC_F5,   KC_F6,   KC_F1, KC_PSCR, XXXXXXX,                             XXXXXXX,  KC_APP, XXXXXXX, XXXXXXX,  XXXXXXX,   TO(3),
                   /*├───────────┤├──────────┤├───────────┤├───────────┤├───────────┤├────────────┤                           ├────────────┤├────────────┤├───────────┤├───────────┤├─────────────┤├──────────┤*/
                     _______, _______, _______, _______, _______, XXXXXXX,                             KC_LEFT,  KC_DOWN,  KC_UP, KC_RGHT,   XXXXXXX,   TO(4),
                   /*├───────────┤├──────────┤├───────────┤├───────────┤├───────────┤├────────────┤┌───────────┐┌────────────┐├────────────┤├────────────┤├───────────┤├───────────┤├─────────────┤├──────────┤*/
@@ -92,6 +92,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LT(2, KC_O):
         case LT(1, KC_E):
         case LT(2, KC_W):
+        case MT(MOD_LGUI,KC_S):
+        case MT(MOD_RGUI,KC_L):
             return 300;  // or whatever feels good
     }
     return TAPPING_TERM;
