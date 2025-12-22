@@ -94,7 +94,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LT(2, KC_W):
         case MT(MOD_LGUI,KC_S):
         case MT(MOD_RGUI,KC_L):
-            return 300;  // or whatever feels good
+            return 350;  // or whatever feels good
     }
     return TAPPING_TERM;
 }
