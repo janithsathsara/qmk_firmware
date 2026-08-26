@@ -25,7 +25,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("Keep it short. Tell me in English. Search the internet");
                 return false;
             case M_SENT2:
-                SEND_STRING("");
+                SEND_STRING("Read the opencode AGENTS.md file. Use the mcps where necessary");
                 return false;
             case M_SENT3:
                 SEND_STRING("");
@@ -133,6 +133,10 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case MT(MOD_RGUI,KC_L):
         case MT(MOD_LALT,KC_A):
         case MT(MOD_RALT,KC_SCLN):
+        case LT(5, KC_SPC):
+        case LT(5, KC_ENT):
+        case LT(4,KC_BSPC):
+        case LT(4,KC_TAB):
             return 350;  // or whatever feels good
     }
     return TAPPING_TERM;
